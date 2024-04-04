@@ -14,7 +14,11 @@
     padding: 10px;
     color: white;
 }
-
+.desktop-menu{
+    align-items: center;
+    margin-left: auto;
+    margin-right: 10%;
+}
 .desktop-menu ul{
     padding: 0;
     margin: 0;
@@ -25,8 +29,6 @@
     list-style-type: none;
     display: inline-block;
     font-size: 18px;
-    margin-left: 1.2em;
-    margin-bottom: 1em;
     padding: 10px;
 }
 .desktop-menu ul li:hover{
@@ -36,6 +38,36 @@
     text-underline-offset: 0.5em;
     color: rgb(90, 90, 90);
 }
+.desktop-menu ul li ul.dropdown li {
+    display: block;
+    font-size: 1rem;
+}
+
+.desktop-menu ul li ul.dropdown{
+    width: auto;
+    z-index: 999;
+    display: none;
+}
+.desktop-menu ul li:hover ul.dropdown{
+    display: block;
+    position: absolute;
+    background: grey;
+    padding: 0.5em 0.5em;
+}
+.desktop-menu ul li:hover ul.dropdown li ul.sub-dropdown{
+    display: none;
+    width: auto;
+}
+.desktop-menu ul li:hover ul.dropdown li:hover ul.sub-dropdown{
+    display: block;
+    position: absolute;
+    background: grey;
+    padding: 0.5em 2em;
+    top: 4em;
+    left: 8em;
+    z-index: 999;
+}
+
 .icon{
     display: none;
 }
@@ -46,14 +78,16 @@
     align-items: center;
     justify-content: center;
 }
-.colorPicker-header{
-    font-size: 1em;
+.colorPicker-container{
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 .colorPicker{
     height: 5rem;
     width: 5rem;
     border: 1px black solid;
+    border-radius: 50%;
     padding: 2em;
     margin-left: 2em;
 }
