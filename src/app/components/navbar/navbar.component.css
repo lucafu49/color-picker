@@ -1,0 +1,59 @@
+.navbar{
+    margin-bottom: 3rem;
+    padding-top: 2em;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    background-color: grey;
+}
+.logo-container{
+    font-size: 2rem;
+    cursor: default;
+    display: flex; /* Para que los elementos dentro del logo-container sean flexibles */
+    align-items: center; /* Para alinear verticalmente los elementos */
+    padding: 10px;
+    color: white;
+}
+
+.desktop-menu ul{
+    padding: 0;
+    margin: 0;
+    transition: color 0.4 ease-in-out;
+    color: white;
+}
+.desktop-menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 1.2em;
+    margin-bottom: 1em;
+    padding: 10px;
+}
+.desktop-menu ul li:hover{
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    color: rgb(90, 90, 90);
+}
+.icon{
+    display: none;
+}
+
+
+.colorPicker-table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.colorPicker-header{
+    font-size: 1em;
+    text-align: center;
+}
+.colorPicker{
+    height: 5rem;
+    width: 5rem;
+    border: 1px black solid;
+    padding: 2em;
+    margin-left: 2em;
+}

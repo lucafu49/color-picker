@@ -1,0 +1,33 @@
+<nav class="navbar" [style.background]="backgroundColor">
+    <div class="logo-container" [style.color]="textColor">Tienda</div>
+
+    <div class="menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--textclr)"
+        class="w-6 h-6 icon">
+        <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="menuIcon" />
+      </svg>
+    </div>
+
+    <div class="desktop-menu">
+        <ul [style.color]="textColor">
+            <li>Inicio</li>
+            <li>FAQ</li>
+            <li>Contacto</li>
+        </ul>
+    </div>
+</nav>
+
+<div class="colorPicker-table">
+
+    <div class="colorPicker-container">
+        <div class="colorPicker-header">Fondo</div>
+        <div class="colorPicker" [(colorPicker)]="backgroundColor" [style.background]="backgroundColor"></div>
+    </div>
+
+    <div class="colorPicker-container">
+        <div class="colorPicker-header">Texto</div>
+        <div class="colorPicker" [(colorPicker)]="textColor" [style.background]="textColor"></div>
+    </div>
+</div>
+
+
