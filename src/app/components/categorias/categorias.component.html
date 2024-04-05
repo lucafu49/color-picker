@@ -1,0 +1,14 @@
+<button id="agregar-categoria" (click)="agregarCategoria()">Agregar Categoría</button>
+
+
+<ul class="categorias-list">
+    <li *ngFor="let categoria of categorias" class="categoria-item">
+      <span class="categoria">{{ categoria.nombre }}</span>
+      
+      <ul class="subcategorias-list">
+        <li *ngFor="let subcategoria of categoria.subcategorias" class="subcategoria-item">{{ subcategoria }}</li>
+        <button class="add" (click)="agregarSubcategoria(categoria)">+</button>
+      </ul>
+    </li>
+  </ul>
+  

@@ -13,15 +13,14 @@
             <li><a href="">Inicio</a></li>
             <li>Productos
                 <ul class="dropdown" [style.background]="backgroundColor" [style.color]="textColor">
-                    <li><a href="">Remeras</a></li>
-                    <li><a href="">Pantalones -</a>
-                        <ul class="sub-dropdown" [style.background]="backgroundColor" [style.color]="textColor">
-                            <li>Jeans</li>
-                            <li>Cargos</li>
-                            <li>Joggins</li>
+                    <li *ngFor="let categoria of categorias">
+                        <a href="">{{ categoria.nombre }}</a>
+                        <ul class="sub-dropdown" *ngIf="categoria.subcategorias && categoria.subcategorias.length > 0" [style.background]="backgroundColor" [style.color]="textColor">
+                            <li *ngFor="let subcategoria of categoria.subcategorias">
+                                <a href="">{{ subcategoria }}</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="">Buzos</a></li>
                 </ul>
             </li>
             <li><a href="">Contacto</a></li>
@@ -41,5 +40,3 @@
         <div class="colorPicker" [(colorPicker)]="textColor" [style.background]="textColor"></div>
     </div>
 </div>
-
-

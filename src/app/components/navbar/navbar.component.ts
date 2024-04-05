@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
+import { CategoriaService } from 'src/app/services/categoria.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,13 +10,16 @@ export class NavbarComponent {
   backgroundColor:any;
   textColor:any;
 
-  categoriasProductos: string[] = ['Electrónica', 'Ropa', 'Hogar', 'Juguetes'];
-
-
   menuValue: boolean = false;
   menuIcon: string = 'M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
 
-  constructor(private elementRef: ElementRef) { }
+  categorias: { nombre: string, subcategorias: string[] }[] = [];
+
+  constructor(private datosService: CategoriaService,private elementRef: ElementRef){ }
+
+  ngOnInit():void{
+    this.categorias = this.datosService.obtenerCategorias();
+  }
 
   openMenu() {
     this.menuValue = !this.menuValue;

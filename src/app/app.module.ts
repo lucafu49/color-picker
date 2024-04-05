@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CategoriasComponent } from './components/categorias/categorias.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,

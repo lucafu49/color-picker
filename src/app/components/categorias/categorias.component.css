@@ -1,0 +1,57 @@
+/* Estilos para las categorías */
+.categorias-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .categoria-item {
+    margin-bottom: 10px; /* Espacio entre elementos */
+  }
+  
+  .categoria {
+    display: flex;
+    font-weight: bold; /* Estilo para la categoría */
+    padding: 10px;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+  
+  /* Estilos para las subcategorías */
+  .subcategorias-list {
+    columns: 3; /* Número de columnas */
+    color: grey;
+
+  }
+  
+  .subcategoria-item {
+    margin-bottom: 5px; /* Espacio entre elementos */
+    font-style: italic; /* Estilo para la subcategoría */
+  }
+  
+  /* Estilos adicionales si es necesario */
+  .add{
+    border: solid grey 1px;
+    border-radius: 1em;
+    font-size: 2rem;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+  }
+  .add:hover{
+    background-color: lightgrey;
+    transition: background-color 0.8 ease;
+  }
+  
+  #agregar-categoria {
+    color: grey;
+    transition: color 0.3s ease; /* Transición para el cambio de color */
+  }
+  
+  #agregar-categoria:hover {
+    color: lightgrey; /* Color al hacer hover */
+    transition: color 0.3s ease; /* Transición para el cambio de color al hacer hover */
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+  }
