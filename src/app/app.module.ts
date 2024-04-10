@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CategoriasComponent } from './components/categorias/categorias.component';
+import { ListaProductosComponent } from './components/lista-productos/lista-productos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    ListaProductosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ColorPickerModule
+    ColorPickerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,8 +10,8 @@
 
     <div class="desktop-menu">
         <ul [style.color]="textColor">
-            <li><a href="">Inicio</a></li>
-            <li>Productos
+            <li><a routerLink="">Inicio</a></li>
+            <li><a routerLink="/productos">Productos</a>
                 <ul class="dropdown" [style.background]="backgroundColor" [style.color]="textColor">
                     <li *ngFor="let categoria of categorias">
                         <a href="">{{ categoria.nombre }}</a>
